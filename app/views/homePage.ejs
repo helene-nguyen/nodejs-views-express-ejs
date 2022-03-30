@@ -1,0 +1,26 @@
+<%- include ("partials/headers.ejs") %>
+
+<title><%= TitleHome %> </title>
+
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>
+        <%= TitleHome %>
+    </h1>
+    <p> <%= txt %> </p> <!-- definir la var -->
+
+    <ul>
+        <% //loop on  %>
+        <% for(let song of table){ %>
+        <% //Pour chaque element de notre liste, on créé un lien vers la page correspondante /:id %>
+        <li><a href="/<%= song.id %>"><%= song.title %></a></li>
+        <% } %>
+    </ul>
+
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
